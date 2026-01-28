@@ -13,56 +13,14 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .phone-frame {
             background: #ffffff;
-            border-radius: 40px;
-            padding: 20px;
-            max-width: 400px;
-            width: 100%;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-            border: 8px solid #1a1a2e;
+            min-height: 100vh;
         }
 
-        .notch {
-            width: 120px;
-            height: 28px;
-            background: #1a1a2e;
-            border-radius: 20px;
-            margin: 0 auto 10px;
-        }
-
-        .url-bar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            padding: 12px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        .url-bar svg {
-            width: 14px;
-            height: 14px;
-            color: #6b7280;
-        }
-
-        .url-bar span {
-            font-size: 14px;
-            color: #6b7280;
-        }
-
-        .content {
-            padding: 0 10px;
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
         }
 
         .logo {
@@ -73,7 +31,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
+            margin: 0 auto 32px;
         }
 
         .logo svg {
@@ -91,10 +49,6 @@
             margin-bottom: 12px;
         }
 
-        .employer-name {
-            color: #1a1a2e;
-        }
-
         .tagline {
             font-size: 16px;
             color: #9ca3af;
@@ -106,14 +60,14 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
         .feature {
             display: flex;
             align-items: center;
             gap: 16px;
-            padding: 16px;
+            padding: 18px;
             background: #f8f9fa;
             border-radius: 16px;
         }
@@ -199,93 +153,79 @@
             height: 14px;
         }
 
-        @media (max-width: 440px) {
-            .phone-frame {
-                border-radius: 0;
-                border: none;
-                box-shadow: none;
+        @media (min-width: 640px) {
+            .container {
+                padding: 60px 24px 80px;
             }
 
-            body {
-                padding: 0;
-                background: #ffffff;
+            h1 {
+                font-size: 32px;
             }
 
-            .notch {
-                display: none;
+            .feature {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="phone-frame">
-        <div class="notch"></div>
-
-        <div class="url-bar">
+    <div class="container">
+        <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            <span>cashout.yourcompany.com</span>
         </div>
 
-        <div class="content">
-            <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-            </div>
+        <h1>Access earnings from your shifts at {Employer Name}</h1>
 
-            <h1>Access earnings from your shifts at <span class="employer-name">{Employer Name}</span></h1>
+        <p class="tagline">Your money when you want it</p>
 
-            <p class="tagline">Your money when you want it</p>
-
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon purple">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Cash out after every shift</h3>
-                        <p>Your money, your schedule</p>
-                    </div>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
                 </div>
-
-                <div class="feature">
-                    <div class="feature-icon blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Money in minutes</h3>
-                        <p>No waiting until Friday</p>
-                    </div>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon purple">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Zero fees, zero fine print</h3>
-                        <p>What you see is what you get</p>
-                    </div>
+                <div class="feature-text">
+                    <h3>Cash out after every shift</h3>
+                    <p>Your money, your schedule</p>
                 </div>
             </div>
 
-            <button class="cta-button">Check Eligibility</button>
+            <div class="feature">
+                <div class="feature-icon blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="feature-text">
+                    <h3>Money in minutes</h3>
+                    <p>No waiting until Friday</p>
+                </div>
+            </div>
 
-            <p class="footer-note">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Takes &lt; 1 minute
-            </p>
+            <div class="feature">
+                <div class="feature-icon purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <div class="feature-text">
+                    <h3>Zero fees, zero fine print</h3>
+                    <p>What you see is what you get</p>
+                </div>
+            </div>
         </div>
+
+        <button class="cta-button">Check Eligibility</button>
+
+        <p class="footer-note">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Takes &lt; 1 minute
+        </p>
     </div>
 </body>
 </html>
